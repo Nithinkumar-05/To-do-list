@@ -1,64 +1,129 @@
-# 📝 To-do List Application
+# 📝 To-Do List Application
 
-A simple and efficient **To-do List** application built using **Spring Boot** for the backend and **Vite + React** for the frontend. The app allows users to create, update, complete, and delete tasks. Data is stored using an **H2 in-memory database**, making it easy to test and deploy without external DB setup.
-
----
-
-## 🔧 Technologies Used
-
-### 🖥️ Frontend
-- [Vite](https://vitejs.dev/)
-- [React](https://reactjs.org/)
-- [Axios](https://axios-http.com/) for API communication
-- CSS for basic styling
-
-### 🚀 Backend
-- [Spring Boot](https://spring.io/projects/spring-boot)
-- [H2 Database](https://www.h2database.com/) (in-memory)
-- Spring Web
-- Spring Data JPA
+A modern, full-stack **To-Do List** application built with **Spring Boot** and **React**. This application provides a clean, intuitive interface for managing daily tasks with complete CRUD functionality and real-time updates.
 
 ---
 
-## 📂 Project Structure
+## ✨ Features
 
-To-do-list/
-├── backend/
-│ └── src/
-│ └── main/
-│ └── java/
-│ └── com.nithin.demo/
-│ ├── controllers/
-|   └── LoginController.java
-│ ├── models/
-|   └── LoginModel.java
-│ ├── repositories/
-|   └── LoginRepo.java
-│ └── services/
-|   └── LoginService.java
-│ ├── DemoApplication.java -- runnable java classfile
-├── frontend/
-│ ├── src/
-│ │ ├── App.jsx
-│ └── index.html
-│ ├── pages/
-|   └── Home.jsx
-│ ├── components/
-|   └── Navbar.jsx
-└── README.md
-
+- 🆕 **Add Tasks** - Create new tasks with ease
+- 📖 **View Tasks** - Display all tasks in a clean interface
+- ✏️ **Edit Tasks** - Modify existing task details
+- ✅ **Toggle Status** - Mark tasks as complete or incomplete
+- 🗑️ **Delete Tasks** - Remove individual tasks
+- 🧹 **Bulk Actions** - Clear all completed tasks at once
+- 🔍 **Filter System** - View tasks by status (All, Active, Completed)
+- 💾 **Persistent Storage** - Data stored in H2 database
 
 ---
 
-## 🧪 Features
+## 🛠️ Technology Stack
 
-- ✅ Add a new task
-- 📋 View all tasks
-- ✏️ Edit a task
-- 🔁 Mark task as complete/incomplete
-- 🗑️ Delete individual tasks
-- 🧹 Clear all completed tasks
-- 🔍 Filter tasks by status (All, Active, Completed)
+### Frontend
+| Technology | Purpose |
+|------------|---------|
+| **React** | UI library for building interactive components |
+| **Vite** | Fast build tool and development server |
+| **Axios** | HTTP client for API communication |
+| **CSS3** | Styling and responsive design |
+
+### Backend
+| Technology | Purpose |
+|------------|---------|
+| **Spring Boot** | Java framework for REST API development |
+| **Spring Data JPA** | Database abstraction layer |
+| **H2 Database** | In-memory database for development |
+| **Spring Web** | Web layer and RESTful services |
+
+---
+
+## 📁 Project Structure
+
+```
+to-do-list/
+│
+├── 🔧 backend/
+│   └── src/main/java/com/nithin/demo/
+│       ├── 🎮 controllers/
+│       │   └── LoginController.java
+│       ├── 📊 models/
+│       │   └── LoginModel.java
+│       ├── 🗃️ repositories/
+│       │   └── LoginRepo.java
+│       ├── ⚙️ services/
+│       │   └── LoginService.java
+│       └── 🚀 DemoApplication.java
+│
+├── 🎨 frontend/
+│   ├── src/
+│   │   ├── 📱 App.jsx
+│   │   ├── 🏠 pages/
+│   │   │   └── Home.jsx
+│   │   └── 🧩 components/
+│   │       └── Navbar.jsx
+│   └── 📄 index.html
+│
+└── 📖 README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- **Java 11+** ☕
+- **Node.js 16+** 🟢
+- **npm or yarn** 📦
+
+### Installation & Setup
+
+#### 🔧 Backend Setup
+```bash
+# Navigate to backend directory
+cd backend
+
+# Run the Spring Boot application
+./mvnw spring-boot:run
+
+# The API will be available at http://localhost:8080
+```
+
+#### 🎨 Frontend Setup
+```bash
+# Navigate to frontend directory
+cd frontend
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+
+# The app will be available at http://localhost:5173
+```
+
+---
+
+## 🌐 API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET` | `/api/tasks` | Retrieve all tasks |
+| `POST` | `/api/tasks` | Create a new task |
+| `PUT` | `/api/tasks/{id}` | Update a specific task |
+| `DELETE` | `/api/tasks/{id}` | Delete a specific task |
+| `DELETE` | `/api/tasks/completed` | Delete all completed tasks |
+
+---
+
+## 🎯 Usage
+
+1. **Add a Task**: Enter your task in the input field and click "Add"
+2. **Complete a Task**: Click the checkbox next to any task
+3. **Edit a Task**: Click the edit button and modify the text
+4. **Delete a Task**: Click the delete button (🗑️) next to any task
+5. **Filter Tasks**: Use the filter buttons to show All, Active, or Completed tasks
+6. **Clear Completed**: Remove all completed tasks with one click
 
 ---
 
